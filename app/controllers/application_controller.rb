@@ -9,6 +9,7 @@ end
 
 def play_paper
   @comp_move = ["rock", "paper", "scissors"].sample
+
   if @comp_move == "rock"
       @outcome = "won"
     elsif @comp_move == "paper"
@@ -34,13 +35,12 @@ def play_rock
   def play_scissors
     @comp_move = ["rock", "paper", "scissors"].sample
     if @comp_move == "scissors"
-        @outcome = "tie"
+        @outcome = "Tied"
       elsif @comp_move == "paper"
-        @outcome =  "won"
+        @outcome =  "Won"
       elsif @comp_move == "rock" 
-        @outcome = "lost"
+        @outcome = "Lost"
       end
-    render({ :template => "game_templates/user_scissors.html.erb"})
+    render({ :template => "game_templates/user_scissors.html.erb" })
     end
-  
 end
